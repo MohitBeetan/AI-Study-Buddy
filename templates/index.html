@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Study Buddy — Your Smart Study Companion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Study Buddy — a smart, multilingual chatbot that helps you study, stay healthy, and maintain a balanced lifestyle.">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts — Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/static/favicon.ico">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Mobile Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">📚</div>
+            <h3>AI Study Buddy</h3>
+        </div>
+
+        <button class="new-chat" id="newChatBtn">
+            <i class="fa-solid fa-plus"></i> New Chat
+        </button>
+
+        <div class="chat-list" id="chatList">
+            <!-- Chat items rendered by JS -->
+        </div>
+    </div>
+
+    <!-- Main Chat Area -->
+    <div class="main">
+
+        <!-- Header -->
+        <div class="chat-header">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <h2>
+                    <span class="status-dot"></span>
+                    AI Study Buddy
+                </h2>
+            </div>
+
+            <div class="header-controls">
+                <select id="language-select" class="lang-selector" aria-label="Select language">
+                    <option value="english">🌐 English</option>
+                    <option value="hindi">🇮🇳 Hindi (हिंदी)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Chat Box -->
+        <div class="chat-box" id="chatBox">
+            <!-- Welcome message or chat messages rendered by JS -->
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <input type="file" id="file-input" accept=".txt,.pdf" style="display: none;" />
+
+            <div class="input-wrapper">
+                <button class="input-btn" id="attach-btn" title="Upload Document" aria-label="Upload document">
+                    <i class="fa-solid fa-paperclip"></i>
+                </button>
+
+                <input 
+                    type="text" 
+                    id="user-input" 
+                    placeholder="Message AI Study Buddy..." 
+                    autocomplete="off"
+                    aria-label="Type your message"
+                />
+
+                <button class="input-btn" id="mic-btn" title="Voice Input" aria-label="Voice input">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+
+                <button class="input-btn" id="send-btn" title="Send Message" aria-label="Send message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+
+            <div class="input-footer">
+                AI Study Buddy can make mistakes. Always verify important information.
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="/static/script.js"></script>
+
+</body>
+</html>
