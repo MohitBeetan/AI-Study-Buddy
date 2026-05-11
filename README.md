@@ -293,6 +293,7 @@ Responses are generated in the currently selected language.
 - Optimized token usage for performance
 
 ---
+# DEPLOYED LINK: https://ai-study-buddy-2ujy.onrender.com/
 
 # Contributors
 
