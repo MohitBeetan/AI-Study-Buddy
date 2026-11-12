@@ -191,15 +191,15 @@ def chat():
             "content": user_message
         })
 
-        # ✅ LIMIT BEFORE API CALL (VERY IMPORTANT)
+        #  LIMIT BEFORE API CALL (VERY IMPORTANT)
         if len(messages) > 15:
             messages = [messages[0]] + messages[-14:]
 
         session["messages"] = messages
 
-        # API Call (use lighter model for stability)
+        # API Call 
         completion = client.chat.completions.create(
-            model="llama-3.1-8b-instant",
+            model="openai/gpt-oss-20b",
             messages=messages,
             temperature=0.7
         )
@@ -214,7 +214,7 @@ def chat():
             "content": reply
         })
 
-        # Limit again after response
+       
         if len(messages) > 15:
             messages = [messages[0]] + messages[-14:]
 

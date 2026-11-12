@@ -1,8 +1,4 @@
-/* ============================================
-   AI Study Buddy — Premium Dark Theme
-   ============================================ */
 
-/* CSS Custom Properties (Design Tokens) */
 :root {
     /* Color Palette */
     --bg-primary: #0f0f1a;
@@ -76,7 +72,7 @@ html {
 
 body {
     font-family: var(--font-primary);
-    background: var(--bg-primary);
+    background: #fff;
     color: var(--text-primary);
     line-height: 1.6;
     overflow: hidden;
@@ -174,8 +170,7 @@ body {
 }
 
 .new-chat:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 0 28px rgba(124, 92, 252, 0.3);
+    background-color: #a0a0c0;
 }
 
 .new-chat:active {
